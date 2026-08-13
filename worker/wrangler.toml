@@ -17,7 +17,7 @@ ENABLE_USER_DELETE_EMAIL = true
 [[d1_databases]]
 binding = "DB"
 database_name = "temp-email-db"             # 跟你下一步建的 D1 名字一致
-database_id = "729dfb9e-5be2-4f93-832d-0c178b77d6cc"
+database_id = "e261db25-3e03-4320-9973-318302f453aa"
 
 [assets]
 directory = "../frontend/dist/"
