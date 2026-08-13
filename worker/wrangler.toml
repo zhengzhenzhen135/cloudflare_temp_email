@@ -6,8 +6,8 @@ keep_vars = true
 
 [vars]
 PREFIX = ""                                 # 空前缀，让 grok-register 自己控制邮箱名
-DEFAULT_DOMAINS = ["noharanas.eu.org"]
-DOMAINS = ["noharanas.eu.org"]
+DEFAULT_DOMAINS = ["docxdectzzz.dpdns.org"]
+DOMAINS = ["docxdectzzz.dpdns.org"]
 ENABLE_USER_CREATE_EMAIL = true             # 允许匿名建地址(grok-register 的 /api/new_address 靠它)
 ENABLE_USER_DELETE_EMAIL = true
 # 注意：JWT_SECRET 不要写在这里（fork 是公开仓库会泄露）。
