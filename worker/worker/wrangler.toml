@@ -1,0 +1,25 @@
+name = "cloudflare_temp_email"
+main = "src/worker.ts"
+compatibility_date = "2025-04-01"
+compatibility_flags = [ "nodejs_compat" ]
+keep_vars = true
+
+[vars]
+PREFIX = ""                                 # 空前缀，让 grok-register 自己控制邮箱名
+DEFAULT_DOMAINS = ["noharanas.eu.org"]
+DOMAINS = ["noharanas.eu.org"]
+ENABLE_USER_CREATE_EMAIL = true             # 允许匿名建地址(grok-register 的 /api/new_address 靠它)
+ENABLE_USER_DELETE_EMAIL = true
+# 注意：JWT_SECRET 不要写在这里（fork 是公开仓库会泄露）。
+# 部署完成后在 Worker 后台 Settings → Variab
+# 名为 JWT_SECRET 的 Secret（随机字符串即可），keep_vars=true 会保住它。
+
+[[d1_databases]]
+binding = "DB"
+database_name = "temp-email-db"             # 跟你下一步建的 D1 名字一致
+database_id = "729dfb9e-5be2-4f93-832d-0c178b77d6cc"
+
+[assets]
+directory = "../frontend/dist/"
+binding = "ASSETS"
+run_worker_first = true
